@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <!-- ListFragment Destination -->
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.lab_week_04.ListFragment"
+        android:label="Coffee List"
+        tools:layout="@layout/fragment_list" >
+
+        <!-- Action to navigate from ListFragment to DetailFragment -->
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+
+    </fragment>
+
+    <!-- DetailFragment Destination -->
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.lab_week_04.DetailFragment"
+        android:label="Coffee Details"
+        tools:layout="@layout/fragment_detail" />
+
+    <!-- FavoritesFragment Destination (Add this if you want to navigate to it as well) -->
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.lab_week_04.FavoritesFragment"
+        android:label="@string/coffee_favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+</navigation>
